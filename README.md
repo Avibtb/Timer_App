@@ -1,1 +1,1 @@
-# Timer_App-
+# A Timer Web App for Tracking down "How many hours have you coded today"
