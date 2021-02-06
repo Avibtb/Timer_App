@@ -3,16 +3,31 @@ let timer;
 let seconds = 0;
 let  min = 0;
 let hr = 0;
-
 let start_btn = document.getElementById("start");
+let stop_btn = document.getElementById("stop");
+let reset_btn = document.getElementById("reset");
+let time = document.getElementById("timer");
+
 start_btn.addEventListener("click",function () {
     timer = setInterval(TimerHandler,1000);
+    reset_btn.disabled = false;
 
 });
 
-let stop_btn = document.getElementById("stop");
 stop_btn.addEventListener("click" ,function () {
     timer = clearInterval(timer);
+    reset_btn.disabled = false;
+});
+
+
+reset_btn.addEventListener("click" ,function () {
+    timer = clearInterval(timer);
+    reset_btn.disabled = true;
+    seconds = 0;
+    hr = 0;
+    min = 0;
+    time.innerHTML ="00:00:00";
+     
 });
 
 function TimerHandler () {
@@ -30,10 +45,9 @@ function TimerHandler () {
 }
 function DisplayTime()
 {
-    let sec;
-    let minute;
-    let  hour;
-    let time = document.getElementById("timer");
+    let sec = seconds;
+    let minute = min;
+    let  hour = hr;
     if(seconds < 10){
         sec = "0"+seconds;
     }
