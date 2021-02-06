@@ -16,7 +16,7 @@
 {
     text-align: center;
     font-size: 30px;
-    width: 150px;
+    width: 250px;
     padding: 50px;
     color: #f3f3f3;
     background: #171717;
@@ -24,7 +24,7 @@
 }
 .buttons{
     text-align: center;
-    width: 150px;
+    width: 250px;
     padding: 50px;
     background: #f3f3f3;
     border-radius: 0px 0px 8px 8px;
@@ -56,7 +56,7 @@
     opacity: 1;
     right: 0;
   }
-.stop{
+.stop ,.reset{
     font-size: 20px;
     border: none;
     text-align: center;
@@ -66,21 +66,22 @@
    color: black;
    border: 2px solid rgb(16, 81, 90);
 }
-.stop span{
+.stop span, .reset span{
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-.stop:hover span {
+.stop:hover span , .reset:hover span{
     padding-right: 25px;
 
   }
   
-  .stop:hover span:after {
+  .stop:hover span:after , .reset:hover span:after{
     opacity: 1;
     right: 0;
   }
+  
 body{
     font-family: "Helvetica",sans-serif;
     background-color:rgb(16, 81, 90);
